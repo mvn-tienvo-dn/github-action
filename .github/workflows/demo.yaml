@@ -6,13 +6,13 @@ on:
       - '**.js'
     branches:
       - 'develop'
-      - 'develop_**'
+      # - 'develop_**'
       # - 'release/**'
       # - '!dev/**'
   # pull_request:
   #   types: [opened, reopened, synchronize]
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [opened]
   workflow_dispatch:
 jobs:
   hello:

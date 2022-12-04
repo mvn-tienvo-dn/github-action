@@ -3,6 +3,7 @@ import './App.css';
 
 const A = 'a'
 const B = 'a'
+const C = 'C'
 
 function App() {
   console.log("gsagsa");

@@ -6,6 +6,7 @@ const B = 'a'
 
 function App() {
   console.log("gsagsa");
+  console.log("dsadasd");
   return (
     <div className="App">
       <header className="App-header">

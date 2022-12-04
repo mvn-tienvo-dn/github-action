@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+const A = 'a'
+
 function App() {
   console.log("gsagsa");
   return (

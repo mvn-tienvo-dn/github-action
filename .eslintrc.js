@@ -24,6 +24,7 @@ module.exports = {
             }
         ],
         "react/react-in-jsx-scope": "off",
-        "no-console": 1
+        "no-console": "error",
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
     }
 }

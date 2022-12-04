@@ -7,12 +7,12 @@ on:
     branches:
       - 'develop'
       - 'develop_**'
+      # - 'release/**'
       # - '!dev/**'
   # pull_request:
   #   types: [opened, reopened, synchronize]
   pull_request:
-    types:
-      - "opened"
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
 jobs:
   hello:

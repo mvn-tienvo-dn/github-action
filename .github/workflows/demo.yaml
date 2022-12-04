@@ -4,7 +4,7 @@ on:
     paths:
       - "!README.md"
       - "!docs/**"
-      - "**.js"
+      # - "**.js"
     branches:
       - "develop"
       - "release/**"

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const A = 'a'
+const B = 'a'
 
 function App() {
   console.log("gsagsa");

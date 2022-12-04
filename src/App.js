@@ -19,7 +19,7 @@ function App() {
         </a>
       </header>
       <body>
-        main main main
+        main main main main
       </body>
     </div>
   );

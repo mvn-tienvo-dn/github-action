@@ -1,8 +1,8 @@
 name: "demo github actions"
 on:
   push:
-    paths:
-      - "!README.md"
+    # paths:
+      # - "!README.md"
       # - "!docs/**"
       # - "**.js"
     branches:

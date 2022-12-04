@@ -6,21 +6,28 @@ on:
       - '**.js'
     branches:
       - 'develop'
+      # - 'develop_**'
       # - 'release/**'
       # - '!dev/**'
   # pull_request:
   #   types: [opened, reopened, synchronize]
   pull_request:
-    types:
-      - "opened"
+    types: [opened, synchronize]
   workflow_dispatch:
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
       - run: echo hello work
-  # hello_1: 
-  #   needs: [hello]
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - run: echo hello work
+  run_ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2.4.2
+      - name: install node 14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+      - name: install node module
+        run: npm i
+      - run: npm run lint

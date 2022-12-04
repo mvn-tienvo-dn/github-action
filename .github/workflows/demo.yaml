@@ -1,13 +1,13 @@
 name: "demo github actions"
 on:
   push:
-    paths:
-      - "!README.md"
-      - "!docs/**"
+    # paths:
+    #   - "!README.md"
+    #   - "!docs/**"
       # - "**.js"
     branches:
       - "develop"
-      - "release/**"
+      # - "release/**"
       # - "!dev/**"
 jobs:
   hello:

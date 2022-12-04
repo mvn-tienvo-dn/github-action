@@ -1,0 +1,25 @@
+name: "demo github actions"
+on:
+  push:
+    # paths:
+      # - '!README.md'
+      # - '!docs/**'
+      # - '**.js'
+    branches:
+      - 'develop'
+      # - 'release/**'
+      # - '!dev/**'
+  # pull_request:
+  #   types: [opened, reopened, synchronize]
+
+  workflow_dispatch:
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello work
+  # hello_1: 
+  #   needs: [hello]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo hello work

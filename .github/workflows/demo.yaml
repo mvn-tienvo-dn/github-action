@@ -15,10 +15,10 @@ on:
     types: [opened, synchronize]
   workflow_dispatch:
 jobs:
-  # hello:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - run: echo hello work
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello work
   # run_ci:
   #   runs-on: ubuntu-latest
   #   steps:

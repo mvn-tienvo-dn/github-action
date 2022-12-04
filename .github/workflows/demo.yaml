@@ -9,7 +9,7 @@ on:
       - "develop"
       # - "release/**"
       # - "!dev/**"
-  workflow_dispatch:
+  # workflow_dispatch:
 jobs:
   hello:
     runs-on: ubuntu-latest

@@ -6,7 +6,7 @@ on:
       - '**.js'
     branches:
       - 'develop'
-      # - 'release/**'
+      - 'develop_**'
       # - '!dev/**'
   # pull_request:
   #   types: [opened, reopened, synchronize]

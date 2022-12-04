@@ -1,14 +1,14 @@
 name: "demo github actions"
 on:
   push:
-    paths:
-      - '!README.md'
+    # paths:
+      # - '!README.md'
       # - '!docs/**'
       # - '**.js'
     branches:
       - 'develop'
-      - 'release/**'
-      - '!dev/**'
+      # - 'release/**'
+      # - '!dev/**'
   # pull_request:
   #   types: [opened, reopened, synchronize]
 

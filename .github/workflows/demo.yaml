@@ -57,5 +57,4 @@ jobs:
       - name: deploy to surge
         run: npm install --global surge
       - run: npm run build
-      - run: cd build
-      - run: surge $SURGE_DOMAIN --token ${{ secrets.SURGE_TOKEN }}
+      - run: surge ./build $SURGE_DOMAIN --token ${{ secrets.SURGE_TOKEN }}

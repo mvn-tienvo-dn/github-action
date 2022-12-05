@@ -50,6 +50,14 @@ jobs:
       pull-requests: write 
     steps:
       - uses: actions/checkout@v2
+      - name: checkout repo
+        uses: actions/checkout@v2.4.2
+      - name: install node 14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+      - name: install node module
+        run: npm i
       - uses: reviewdog/action-eslint@v1
         with:
           github_token: ${{ github.token }}

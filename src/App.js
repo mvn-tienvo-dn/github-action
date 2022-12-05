@@ -21,7 +21,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hihi va hihi
+          Hihi va hihi va hihi
         </a>
       </header>
     </div>

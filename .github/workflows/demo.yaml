@@ -17,7 +17,8 @@ on:
   workflow_dispatch:
 
 env:
-  SURGE_DOMAIN: demo-github-actions.surge.sh
+  # SURGE_DOMAIN: demo-github-actions.surge.sh
+  SURGE_DOMAIN: tv-demo-github-actions.surge.sh
 
 jobs:
   hello:

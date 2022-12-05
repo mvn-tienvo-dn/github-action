@@ -1,0 +1,13 @@
+name: Demo github action
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  hello-word:
+    runs-on: ubuntu-latest
+    steps:
+      - name: in ra cau lenh hello Tien Le
+        run: echo hello chi Tien Lee
+
+  

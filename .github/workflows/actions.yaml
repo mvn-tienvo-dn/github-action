@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 14.x
       - run: npm i
-      - run: npm run lint
+      # - run: npm run lint
   eslint:
     needs: [hello-word]
     name: runner / eslint

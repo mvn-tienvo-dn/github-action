@@ -9,5 +9,13 @@ jobs:
     steps:
       - name: in ra cau lenh hello Tien Le
         run: echo hello chi Tien Lee
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+      - run: npm i
+
 
   

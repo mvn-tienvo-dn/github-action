@@ -1,33 +1,33 @@
-name: Demo github action
-on:
-  push:
-    branches:
-      - "main"
-jobs:
-  hello-word:
-    runs-on: ubuntu-latest
-    steps:
-      - name: in ra cau lenh hello Tien Le
-        run: echo hello chi Tien Lee
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14.x
-      - run: npm i
-      - run: npm run lint
-  eslint:
-    needs: [hello-word]
-    name: runner / eslint
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write 
-    steps:
-      - uses: actions/checkout@v2
-      - uses: reviewdog/action-eslint@v1
-        with:
-          github_token: ${{ github.token }}
-          reporter: github-pr-review # Change reporter.
-          eslint_flags: 'src/'
+# name: Demo github action
+# on:
+#   push:
+#     branches:
+#       - "main"
+# jobs:
+#   hello-word:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: in ra cau lenh hello Tien Le
+#         run: echo hello chi Tien Lee
+#       - name: checkout
+#         uses: actions/checkout@v3
+#       - name: setup node
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 14.x
+#       - run: npm i
+#       - run: npm run lint
+#   eslint:
+#     needs: [hello-word]
+#     name: runner / eslint
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: read
+#       pull-requests: write 
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: reviewdog/action-eslint@v1
+#         with:
+#           github_token: ${{ github.token }}
+#           reporter: github-pr-review # Change reporter.
+#           eslint_flags: 'src/'

@@ -1,13 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-const A = 'a'
-const B = 'a'
-const C = 'C'
-
 function App() {
-  console.log("gsagsa");
-  console.log("dsadasd");
   return (
     <div className="App">
       <header className="App-header">

@@ -1,12 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-const A = 'a'
-const B = 'a'
-const C = 'C'
+const D = 'D'
 
 function App() {
-  console.log("gsagsa");
   console.log("dsadasd");
   return (
     <div className="App">

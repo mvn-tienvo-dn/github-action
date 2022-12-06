@@ -9,6 +9,8 @@ on:
       - "main"
   pull_request:
     types: [opened, synchronize]
+env:
+  SURGE_DOMAIN: demo-github-action.surge.sh
 jobs:
   tien-le:
     runs-on: ubuntu-latest
@@ -27,3 +29,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review # Change reporter.
           eslint_flags: 'src/'
+      - run: npm install -g surge
+      - run: npm run build
+      - run: surge ./build $SURGE_DOMAIN --token ${{ secrets.SURGE_TOKEN }}

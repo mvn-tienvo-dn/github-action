@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-const a = 'asas'
+// const a = 'asas'
+// const b = 'asas'
 
 function App() {
-  console.log('dsd');
+  // console.log('dsd');
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +19,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hihi va hihi va hihi
+          Hihi va hihi va hihi va hihi
         </a>
       </header>
     </div>

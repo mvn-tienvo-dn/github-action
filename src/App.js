@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+const a = 'asas'
+
 function App() {
   console.log('dsd');
   return (

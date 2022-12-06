@@ -9,3 +9,10 @@ jobs:
     steps:
       - name: hello 
         run: echo abcbsdd
+      - name: check source
+        run: actions/checkout@v3
+      - run: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm i
+      - run: npm lint

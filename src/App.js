@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const a = 'asas'
+const b = 'asas'
 
 function App() {
   console.log('dsd');

@@ -1,69 +1,69 @@
-name: "demo github actions"
-on:
-  push:
-    paths:
-      - '!README.md'
-      - '**.js'
-    branches:
-      - 'develop'
-      - 'main'
-      # - 'develop_**'
-      # - 'release/**'
-      # - '!dev/**'
-  # pull_request:
-  #   types: [opened, reopened, synchronize]
-  pull_request:
-    types: [opened, synchronize]
-  workflow_dispatch:
+# name: "demo github actions"
+# on:
+#   push:
+#     paths:
+#       - '!README.md'
+#       - '**.js'
+#     branches:
+#       - 'develop'
+#       - 'main'
+#       # - 'develop_**'
+#       # - 'release/**'
+#       # - '!dev/**'
+#   # pull_request:
+#   #   types: [opened, reopened, synchronize]
+#   pull_request:
+#     types: [opened, synchronize]
+#   workflow_dispatch:
 
-env:
-  # SURGE_DOMAIN: demo-github-actions.surge.sh
-  SURGE_DOMAIN: tv-demo-github-actions.surge.sh
+# env:
+#   # SURGE_DOMAIN: demo-github-actions.surge.sh
+#   SURGE_DOMAIN: tv-demo-github-actions.surge.sh
 
-jobs:
-  hello:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo hello work
-  # run_ci:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: checkout repo
-  #       uses: actions/checkout@v2.4.2
-  #     - name: install node 14
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 14.x
-  #     - name: install node module
-  #       run: npm i
-  #     # - run: npm run lint
-  #     - name: add action review dog
-  #       uses: reviewdog/action-eslint@v1
-  #       with:
-  #         reporter: github-check
-  #         eslint_flags: 'src/'
-  eslint:
-    name: runner / eslint
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write 
-    steps:
-      - uses: actions/checkout@v2
-      - name: checkout repo
-        uses: actions/checkout@v2.4.2
-      - name: install node 14
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14.x
-      - name: install node module
-        run: npm i
-      - uses: reviewdog/action-eslint@v1
-        with:
-          github_token: ${{ github.token }}
-          reporter: github-pr-review # Change reporter.
-          eslint_flags: 'src/'
-      - name: deploy to surge
-        run: npm install --global surge
-      - run: npm run build
-      - run: surge ./build $SURGE_DOMAIN --token ${{ secrets.SURGE_TOKEN }}
+# jobs:
+#   hello:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: echo hello work
+#   # run_ci:
+#   #   runs-on: ubuntu-latest
+#   #   steps:
+#   #     - name: checkout repo
+#   #       uses: actions/checkout@v2.4.2
+#   #     - name: install node 14
+#   #       uses: actions/setup-node@v3
+#   #       with:
+#   #         node-version: 14.x
+#   #     - name: install node module
+#   #       run: npm i
+#   #     # - run: npm run lint
+#   #     - name: add action review dog
+#   #       uses: reviewdog/action-eslint@v1
+#   #       with:
+#   #         reporter: github-check
+#   #         eslint_flags: 'src/'
+#   eslint:
+#     name: runner / eslint
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: read
+#       pull-requests: write 
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: checkout repo
+#         uses: actions/checkout@v2.4.2
+#       - name: install node 14
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 14.x
+#       - name: install node module
+#         run: npm i
+#       - uses: reviewdog/action-eslint@v1
+#         with:
+#           github_token: ${{ github.token }}
+#           reporter: github-pr-review # Change reporter.
+#           eslint_flags: 'src/'
+#       - name: deploy to surge
+#         run: npm install --global surge
+#       - run: npm run build
+#       - run: surge ./build $SURGE_DOMAIN --token ${{ secrets.SURGE_TOKEN }}

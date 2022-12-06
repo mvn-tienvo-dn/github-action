@@ -1,0 +1,11 @@
+name: Demo
+on: 
+  push:
+    branches:
+      - "main"
+jobs:
+  tien-le:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello 
+        run: echo abcbsdd

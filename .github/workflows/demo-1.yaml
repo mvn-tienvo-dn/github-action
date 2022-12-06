@@ -30,4 +30,5 @@ jobs:
           reporter: github-pr-review # Change reporter.
           eslint_flags: 'src/'
       - run: npm install -g surge
-      - run: surge ./ $SURGE_DOMAIN --token ${{ secrets.SURGE_TOKEN }}
+      - run: npm run build
+      - run: surge ./build $SURGE_DOMAIN --token ${{ secrets.SURGE_TOKEN }}

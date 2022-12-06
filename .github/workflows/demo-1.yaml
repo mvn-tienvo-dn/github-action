@@ -1,8 +1,14 @@
 name: Demo
 on: 
   push:
+    paths:
+      - "!README.md"
+      - "**.js"
+      - "!docs/**"
     branches:
       - "main"
+  pull_request:
+    types: [opened, synchronize]
 jobs:
   tien-le:
     runs-on: ubuntu-latest
@@ -15,4 +21,9 @@ jobs:
         with:
           node-version: 16
       - run: npm i
-      - run: npm run lint
+      # - run: npm run lint
+      - uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review # Change reporter.
+          eslint_flags: 'src/'
